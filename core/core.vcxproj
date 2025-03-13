@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{428f85c3-0c78-4df2-a1f4-69515d8d278d}</ProjectGuid>
+    <RootNamespace>core</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)build\</OutDir>
+    <IntDir>$(SolutionDir)build\intermediates\core\</IntDir>
+    <IncludePath>$(SolutionDir)core\libraries\ultralight\include\;$(SolutionDir)core\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)core\libraries\libs\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)build\</OutDir>
+    <IntDir>$(SolutionDir)build\intermediates\core\</IntDir>
+    <IncludePath>$(SolutionDir)core\libraries\ultralight\include\;$(SolutionDir)core\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)core\libraries\libs\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>AppCore.lib;Ultralight.lib;UltralightCore.lib;WebCore.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>AppCore.lib;Ultralight.lib;UltralightCore.lib;WebCore.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="entry-point\entry-point.cpp" />
+    <ClCompile Include="workspace\webview\webview.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="entry-point\entry-point.hpp" />
+    <ClInclude Include="libraries\ultralight\include\AppCore\App.h" />
+    <ClInclude Include="libraries\ultralight\include\AppCore\AppCore.h" />
+    <ClInclude Include="libraries\ultralight\include\AppCore\CAPI.h" />
+    <ClInclude Include="libraries\ultralight\include\AppCore\Defines.h" />
+    <ClInclude Include="libraries\ultralight\include\AppCore\Dialogs.h" />
+    <ClInclude Include="libraries\ultralight\include\AppCore\JSHelpers.h" />
+    <ClInclude Include="libraries\ultralight\include\AppCore\Monitor.h" />
+    <ClInclude Include="libraries\ultralight\include\AppCore\Overlay.h" />
+    <ClInclude Include="libraries\ultralight\include\AppCore\Platform.h" />
+    <ClInclude Include="libraries\ultralight\include\AppCore\Window.h" />
+    <ClInclude Include="libraries\ultralight\include\JavaScriptCore\JavaScript.h" />
+    <ClInclude Include="libraries\ultralight\include\JavaScriptCore\JSBase.h" />
+    <ClInclude Include="libraries\ultralight\include\JavaScriptCore\JSContextRef.h" />
+    <ClInclude Include="libraries\ultralight\include\JavaScriptCore\JSObjectRef.h" />
+    <ClInclude Include="libraries\ultralight\include\JavaScriptCore\JSObjectRefPrivate.h" />
+    <ClInclude Include="libraries\ultralight\include\JavaScriptCore\JSRetainPtr.h" />
+    <ClInclude Include="libraries\ultralight\include\JavaScriptCore\JSStringRef.h" />
+    <ClInclude Include="libraries\ultralight\include\JavaScriptCore\JSTypedArray.h" />
+    <ClInclude Include="libraries\ultralight\include\JavaScriptCore\JSValueRef.h" />
+    <ClInclude Include="libraries\ultralight\include\JavaScriptCore\WebKitAvailability.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\Bitmap.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\Buffer.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_Bitmap.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_Buffer.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_Clipboard.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_Config.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_Defines.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_FileSystem.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_FontFile.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_FontLoader.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_GamepadEvent.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_Geometry.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_GPUDriver.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_ImageSource.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_KeyEvent.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_Logger.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_MouseEvent.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_Platform.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_Renderer.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_ScrollEvent.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_Session.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_String.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_Surface.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\CAPI\CAPI_View.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\ConsoleMessage.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\Defines.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\Exports.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\GamepadEvent.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\Geometry.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\ImageSource.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\JavaScript.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\KeyCodes.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\KeyEvent.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\Listener.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\Lock.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\Matrix.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\MouseEvent.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\NetworkRequest.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\platform\Allocator.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\platform\Clipboard.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\platform\Config.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\platform\FileSystem.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\platform\FontLoader.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\platform\GPUDriver.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\platform\Logger.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\platform\Platform.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\platform\Surface.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\platform\Thread.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\RefPtr.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\Renderer.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\RenderTarget.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\ScrollEvent.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\Session.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\String.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\String16.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\String32.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\String8.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\StringSTL.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\Ultralight.h" />
+    <ClInclude Include="libraries\ultralight\include\Ultralight\View.h" />
+    <ClInclude Include="workspace\webview\webview.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="libraries\libs\AppCore.lib" />
+    <Library Include="libraries\libs\Ultralight.lib" />
+    <Library Include="libraries\libs\UltralightCore.lib" />
+    <Library Include="libraries\libs\WebCore.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
