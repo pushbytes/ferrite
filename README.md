@@ -11,12 +11,15 @@ This isn't bad but it could have a ton of room for improvement imo.<br/>
 I still will use Web however instead of Electron, I'm going to implement the Editor with Ultralight!<br/>
 
 
-##  Why CPP?
+##  Why CPP & Ultralight?
 People might look at this and say why CPP over Rust or Carbon (🤔)<br/>
 
 CPP isn't obsolete yet and it probably won't be for quite a bit especially because how widely used it is.<br/>
 
 For most of my time that I've spent developing it's all been game hacking which mostly has been done in CPP, and I want to use CPP til it dies out.<br/>
+
+For ultralight however; I still want to make the code editor with web languages for customization.<br/>
+I'm aware that ultralight will have somewhat high memory usage but it will help in the long run<br/>
 
 
 ##  Extensions
